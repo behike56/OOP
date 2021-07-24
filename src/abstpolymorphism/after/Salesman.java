@@ -1,15 +1,13 @@
 package abstpolymorphism.after;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Salesman extends EmployeeType{
     @Override
     int getTypeCode() {
-        return 0;
+        return EmployeeType.SALESMAN;
     }
 
     @Override
-    public int payAmount(AfterEmployee afterEmployee) {
-        return 0;
+    int payAmount(AfterEmployee emp) {
+        return emp.getMonthlySalary() + emp.getCommission();
     }
 }

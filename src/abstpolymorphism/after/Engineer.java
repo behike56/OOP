@@ -1,14 +1,13 @@
 package abstpolymorphism.after;
 
 public class Engineer extends EmployeeType{
-
     @Override
     int getTypeCode() {
-        return 0;
+        return EmployeeType.ENGINEER;
     }
 
     @Override
-    public int payAmount(AfterEmployee afterEmployee) {
-        return 0;
+    int payAmount(AfterEmployee emp) {
+        return emp.getMonthlySalary();
     }
 }
